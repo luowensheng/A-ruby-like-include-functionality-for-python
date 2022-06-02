@@ -1,10 +1,9 @@
 # A Ruby-like Include functionality for python
-## Also similar to "traits" in PHP
+   Also similar to "traits" in PHP
 
 ### Different components can be added to a class using a decorator without the complixity arising from multiple Inheritance:
 
 
-1. 
 
 ```python
 @include(Legs, Hands, Eyes, Head)        
@@ -54,6 +53,9 @@ class Legs:
     def stand(self):
         print(self.name+" is standing")
 
+```
+
+```python
 
 class Eyes:
     def look(self):
@@ -68,6 +70,9 @@ class Eyes:
     def cry(self):
         print(self.name+" is crying")
         
+```
+
+```python
 
 class Hands:
     def wave(self):
@@ -81,7 +86,11 @@ class Hands:
         
     def stand(self):
         print(self.name+" is standing")
-        
+
+```
+
+```python
+
 class Head:
     def nod(self):
         print(self.name+" is nodding")
@@ -105,6 +114,7 @@ def include(*other_objs):
         
     return inner   
 ```
+
 ### Usage:
 
 ```python
